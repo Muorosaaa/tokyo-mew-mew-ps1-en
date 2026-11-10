@@ -1,0 +1,55 @@
+# Japanese that tools/jpleft.py should stop reporting: FILE ENTRY OFFSET(hex) note. ENTRY - = flat file.
+# Checked 2026-11-09 (whole-disc scan).
+SLPM_871.78 - 01c2bd ハル・グローリー/シバの意  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c2e0 いだ/二代目レイブ使い  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c350 マデウス/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c376 ジークハルト/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c394 プーシャ/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c3c8 ソラシド/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c406 アコード/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c422 シュナイダー/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c456 ルチアングル/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c474 リオネット/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c484 ロン・グラッセ/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c498 ジェガン/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c4a6 ベリアル/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c4c0 ユリウス/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c4d8 カトレア/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c4f2 ソレイユ/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c50a ドリュー/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c53c ナカジマ/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c54a スコーピオン/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c568 ゴーレム/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c580 スライム/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c5d0 ザマース/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 01c5de フンガー/説明  # dead: Rave Master name table left in the EXE, unreferenced (its pointer table at 0x1c1c0 is unused; the guidebook rewrite reuses that space)
+SLPM_871.78 - 0ec3d7 けだはまろ  # noise: u16 number table
+SLPM_871.78 - 0ec7a7 けだはまろ  # noise: u16 number table
+D_SYSTEM.BIN 21 00da21 痳矣やゃ釿矮  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 36 012fac フャガガ  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 75 00cb97 跏鉞跏よ跏輦ふ  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 100 005d43 れ��瑟韜韜を  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 103 008545 搨槧栫ぴ樞や  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 103 009d89 や棍矚趙よ  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 103 00abed よ趙わ譫榠  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 107 011cdd 韈驕みお÷  # noise: pixel/graphics data decoded as Shift-JIS
+D_SYSTEM.BIN 107 011fe4 おモヤモモ  # noise: pixel/graphics data decoded as Shift-JIS
+D_UNIT.BIN 239 000bc8 フォルダへ  # noise: folder-name string inside unit data, not shown
+D_SCREEN.BIN 12 012a49 ぁる鳧鈑粃  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 50 00eba1 痳矣やゃ釿矮  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 55 005f0c 敲跂うに  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 83 005cb9 メメャメ驃  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 130 005d43 れ��瑟韜韜を  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 133 008545 搨槧栫ぴ樞や  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 133 009d89 や棍矚趙よ  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 133 00abed よ趙わ譫榠  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 137 011cdd 韈驕みお÷  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 137 011fe4 おモヤモモ  # noise: pixel/graphics data decoded as Shift-JIS
+D_SCREEN.BIN 182 00e15b てポあ  # noise: pixel/graphics data decoded as Shift-JIS
+D_FIELD.BIN 0 0144c4 ヴャャヴ荘槍怎泊  # noise: pixel/graphics data decoded as Shift-JIS
+D_FIELD.BIN 1 00c15e 司さ悒が  # noise: pixel/graphics data decoded as Shift-JIS
+D_FIELD.BIN 10 0171a7 �Vョメャベ�怦ヨ㏍V  # noise: pixel/graphics data decoded as Shift-JIS
+D_FIELD.BIN 10 0172a0 �㊧�揀ャヨャヨ  # noise: pixel/graphics data decoded as Shift-JIS
+D_FIELD.BIN 131 014484 ヴャャヴ荘槍怎泊  # noise: pixel/graphics data decoded as Shift-JIS
+SLPM_871.78 - 002a60 東京ミュウミュウ_データ００  # kept (user, 2026-11-09): memory-card save title, shown only by the BIOS/emulator card manager
+SLPM_871.78 - 002a84 東京ミュウミュウ_システムデータ  # kept (user, 2026-11-09): memory-card system-file title

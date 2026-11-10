@@ -1,0 +1,28 @@
+# leftover inline strings (profile answers, album, save errors, diary); index -> English, keys from build/inline_misc.json
+YN='{fc0420} 　　Yes　　　 　　No　　　 {fc0020}'
+E={
+2:'More a daily ritual than\n a hobby, but',
+3:' it\'s afternoon tea. I\'ve\n not missed it since I was\n little. Oh, and reading.',
+4:'Playing with Anin！',
+11:'Cooking and making sweets.',
+14:'Sweets with maple syrup\n （and strawberries）！\n And bonito flakes, nya.',
+15:'I like stewed dishes best.',
+16:'Roasted chestnuts\n are the best！',
+17:'Watermelon, milk',
+20:'If I must, common food.',
+23:'Natto.',
+25:'That\'s embarrassing～',
+26:'That\'s embarrassing～',
+28:'The album is full.\nChoose a photo to delete.',
+29:'Delete this photo？\nAre you sure？\n'+YN,
+30:'The photo you just took\nwon\'t be saved. Okay？\n'+YN,
+34:'Wear this？\n That\'s out of question.',
+36:'{fc0420}　System data mismatch！\n{fc0020}{fcffff}:\nThe memory card may\nhave been swapped.\nCheck {fcffff}.',
+37:'{fc0420}System data is corrupted！\n{fc0020}{fcffff}:\nThe system data on this\nmemory card can\'t be used.\n{fc0820}It will be recreated the\nnext time you save.{fc0020}',
+38:'　Failed to save data.',
+39:'　Failed to load data.',
+40:'　Failed to format.',
+41:'{fc0420}　Not enough free blocks！\n{fc0020}{fcffff}:\nThe memory card lacks\nenough free blocks.\n“Tokyo Mew Mew” needs a\nmemory card with at least\n<37> free block.',
+42:'{fc0420}　Not enough free blocks！\n{fc0020}The memory card lacks\nenough free blocks.\n“Tokyo Mew Mew” needs a\nmemory card with at least\n<37> free block.',
+44:'<f8><78><00><00>Neat handwriting says:<fe><00>“Deep in Tranquil Woods lies\n a spot that lost even us\n rangers. We found a cave.”<fe><00>“We\'ll call it Mystery Cave.”<fe><00>“Inside, we found a giant\n armadillo. We left quietly\n so as not to disturb it.”',
+}

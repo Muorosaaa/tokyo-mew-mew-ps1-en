@@ -1,0 +1,14 @@
+# name	map	flags (bit:nbits:value,...)	poke (addr:byte,...)	spatch (addr:oldhex:newhex,...)	start (ROUTE@CARD; empty = New Game)	opts (LUAVAR=value,...)	frames	verified (date: what the shot shows)
+night_forest_29	29						9000	2026-11-08: field, night forest path with a machine
+day_forest_40	40						9000	2026-11-08: field, daytime forest
+bedroom_night_chat	4	0x178:8:1					9500	2026-11-08: bedroom, Ichigo/Mint/Pudding chat, Shirogane scene
+day1_card	4	0x178:8:21	0x800FF83A:0	0x801E9A8B:44041420:44041120			9300	2026-11-09: save prompt (list shows Day0), then the "Day 1" card over the cottage
+day2_card	4	0x178:8:21	0x800FF83A:1	0x801E9A8B:44041420:44041220			9300	2026-11-09: save prompt (list shows Day1), then the "Day 2" card over the cottage
+day3_card	4	0x178:8:21	0x800FF83A:2	0x801E9A8B:44041420:44041320			9300	2026-11-09: save prompt (list shows Day2), then the "Day 3" card over the cottage
+day4_card	4	0x178:8:21	0x800FF83A:3	0x801E9A8B:44041420:44041420			9300	2026-11-09: save prompt (list shows Day3), then the "Day 4" card over the cottage
+day5_card	4	0x178:8:21	0x800FF83A:4	0x801E9A8B:44041420:44041520			9300	2026-11-09: save prompt (list shows Day4), then the "Day 5" card over the cottage
+day6_card	4	0x178:8:21	0x800FF83A:5	0x801E9A8B:44041420:44041620			9300	2026-11-09: save prompt (list shows Day5), then the "Day 6" card over the cottage
+game_over					slot2_battle.txt@tools/debug/user_card.mcd	KILLPARTY=1	11000	2026-11-09: slot 02 -> Strolling Woods battle, party knocked out at the first hit, English "Game Over" over crying Pudding, back at the save machine (Save/Animals/Album), save screen
+# Day cards: op 44 04 NN, NN = 0x10 + day (map 4 entry offset 0x1A8A). NN 0x10 and 0x17 show no card in map 4 (used in entries 1/4/5 and 39/224): unknown.
+# Special entries (2026-11-09): no map or literal call reaches 224/225/241-248/254; see docs/re/README.md "Special scripts". Not warpable yet.
+# TODO: staff credits (D_EFFECT 602), endings (entries 224/225, 241-248, 254), battles, field menu, shops.

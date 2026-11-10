@@ -1,0 +1,5 @@
+# Load memory-card slot 02 (Cottage Woods, Day 2 day) from the title screen, then walk into Strolling Woods until the
+# random battle starts (~frame 7300 from boot). Route from the user (2026-11-08): down 5 s, left 4 s, left 6 s, down 5 s,
+# left 4 s, then alternate down/left. Card: tools/debug/user_card.mcd. emu.py --route-str format, one step list per line.
+1500 -;600 -;6 start;400 -;6 start;300 -;6 start;400 -;6 start;200 -;6 right;60 -;6 circle;300 -;6 circle;300 -;400 -;6 down;60 -;6 circle;200 -;500 -
+600 -;300 down;240 left;360 left;300 down;240 left;120 down;120 left;120 down;120 left;120 down;120 left;120 down;120 left;120 down;120 left;120 down;120 left;600 -
