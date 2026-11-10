@@ -22,5 +22,9 @@ Skill: translate-retro-game; `python tools/skill.py` prints its folder. Read its
 - Built files must keep their original size; entries are written in place at original offsets.
 - Decisions with reasons: `docs/decisions.md`. Read it before asking the user anything.
 
+## Git
+- Private repo: github.com/Muorosaaa/tokyo-mew-mew-ps1-en (`origin`, branch `main`). Commit in this folder at the end of each session; the user pushes from Windows (`git push`), since Claude's GitHub link can't reach this private repo.
+- Never commit game data: disc images, `orig/`, `dec/`, builds, BIOS and emulators stay out via `.gitignore`.
+
 ## Status
 `docs/status.md`: done, next, open bugs. Update it at the end of every session.
