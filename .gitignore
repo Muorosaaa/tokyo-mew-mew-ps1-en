@@ -4,7 +4,8 @@ dec/
 build/
 work/
 dist/
-release/
+release/*
+!release/README.txt
 __pycache__/
 *.pyc
 tools/*/

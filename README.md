@@ -1,4 +1,4 @@
-# Tokyo Mew Mew ~Tōjō Shin Mew Mew!~ (PS1) – English fan translation
+# Tokyo Mew Mew: Tōjō Shin Mew Mew! (PS1) – English fan translation
 
 Japan-only PS1 RPG by Takara/Winkysoft (2002, SLPM-87178), translated to English.
 Work in progress: dialogue, menus, encyclopedias and most on-screen graphics are done; see `docs/status.md`.
