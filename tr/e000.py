@@ -10,10 +10,10 @@ TR.update({
 41: "I could go outside from here…\nbut I should stay put till\nShirogane's group is back.",
 42: "Ah, Ichigo onee-chan.\nPerfect timing, na no da.\nLet's explore, na no da.",
 43: "Exploring… We're supposed to\nbe house-sitting. If we don't,\nwe might lose our dinner！",
-44: "Uuu～ Okay, na no da. Too bad.\nIchigo onee-chan, you're my\nhero！ Thanks, na no da.",
-45: "You're exaggerating～\nBut don't go outside, OK？",
+44: "Uuu～ Okay, na no da. Too bad.\nThanks for warning me！ You\nsaved my dinner, na no da！",
+45: "You're exaggerating～\nBut don't wander off, OK？",
 46: "Roooger that, na no da！",  # deliberately 2 bytes over: tests relocation
-47: "It's okay, na no da.\nI'll hold it in, na no da.\nThanks for caring, na no da.",
+47: "It's okay, na no da.\nI'll be patient, na no da.\nThanks for caring, na no da.",
 48: "Heh heh heh…",
 49: "Now, what shall I do to you…\nKukukukuku…",
 })

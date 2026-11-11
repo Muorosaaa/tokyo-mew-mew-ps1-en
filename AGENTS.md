@@ -20,6 +20,7 @@ Skill: translate-retro-game; `python tools/skill.py` prints its folder. Read its
 - Edit source files only with the file-edit tool. Many strings contain `{fcXXXX}`/`<xx>` codes and full-width punctuation (！？…「」); keep them.
 - Every recompressed archive entry MUST go through the lead-limited packer (`build(..., leadlimit=True)`): the game decompresses in place, and a smaller stream that outruns the original freezes the game (Level Up hang). Entries that can't be packed safely are skipped and stay Japanese.
 - Built files must keep their original size; entries are written in place at original offsets.
+- Proofreading (user ruling, 2026-11-10): when the user suggests a rewrite, show draft wording first (each box line by line, fitted to the box, with A/B options where the Japanese allows more than one reading) and change `tr/` only after the user picks. Sheet rows refer to `TokyoMewMew_script_proofread.xlsx` (dialogue in script order; regenerate the row list with `work/script/dump.py`).
 - Decisions with reasons: `docs/decisions.md`. Read it before asking the user anything.
 
 ## Git
