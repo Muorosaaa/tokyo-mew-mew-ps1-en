@@ -27,7 +27,7 @@ TR.update({
 55: "But then…",
 56: 'Yaaawn…',
 57: "Hm？",
-58: '（Huh？ Serious faces…\nWhat are they saying？）',
+58: "（Huh？ They look serious…\nWhat's going on？）",
 59: "…Right. It was in R-2000's\nrecords too, wasn't it？",
 60: "Yes. It's too early to say,\nbut the penguin Ichigo-san met\nmay be the RDA we're after.",
 61: '（After？ Meaning…？）',
