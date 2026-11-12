@@ -38,11 +38,11 @@ def jmp(at,target):
     return b'\x01'+struct.pack('<h',v)
 # Fallback when no cave fits (2026-11-10): the box before an overlong box is often a consecutive box of the same
 # speech with spare bytes. Repack [prev box][next-box commands][this box] into their combined span, sliding the
-# 14-byte "next box" command block (7b 01 00 = wait for button, 1f 0c lo hi = voice clip, 1f 08 0a 04 00, 28 00)
+# 14-byte "next box" command block (7b lo hi = wait for button, 1f 0c lo hi = voice clip, 1f 08 0a 04 00, 28 00)
 # left. Only when that block matches exactly and no jump or header entry anywhere in the entry lands on a command
 # inside the span (bytes inside text strings are skipped as sources, and targets inside the two texts are ignored).
 import re as _re
-BOXGAP=_re.compile(rb'\A\x7b\x01\x00\x1f\x0c..\x1f\x08\x0a\x04\x00\x28\x00\Z',_re.S)
+BOXGAP=_re.compile(rb'\A(\x7b..\x1f\x0c..\x1f\x08\x0a\x04\x00\x28\x00)?\Z',_re.S)   # or nothing: boxes back to back
 def _lands_in(e,lo,hi,skip,msgs,texts):
     from sdis import JUMPS
     intext=lambda x:any(a<=x<b for a,b in texts)
@@ -73,6 +73,20 @@ def borrow_prev(e,msgs,tr,k,body,free):
     e[p['at']:m['end']]=new
     free[:]=[f for f in free if not (p['at']<=f[0]<m['end'])]
     return True
+def borrow_next(e,msgs,tr,k,body,free):
+    """Mirror of borrow_prev: repack [this box][next-box commands][next box] into their combined span."""
+    if k+1>=len(msgs) or (k+1) not in tr: return False
+    m=msgs[k]; q=msgs[k+1]
+    qb=q['hdr']+encode(tr[k+1])+b'\xff'
+    if len(qb)>q['end']-q['at'] or e[q['at']]!=0x78 or e[m['at']]!=0x78: return False
+    gap=bytes(e[m['end']:q['at']])
+    if not BOXGAP.match(gap): return False
+    if len(body)+len(gap)+len(qb)>q['end']-m['at']: return False
+    if _lands_in(e,m['at'],q['end'],(m['at'],q['end']),msgs,[(m['text_at'],m['end']),(q['text_at'],q['end'])]): return False
+    new=body+gap+qb; new+=bytes([NOP])*(q['end']-m['at']-len(new))
+    e[m['at']:q['end']]=new
+    free[:]=[f for f in free if not (m['at']<=f[0]<q['end'])]
+    return True
 def rebuild(e,msgs,tr):
     e=bytearray(e)
     over=[]; free=[]
@@ -93,7 +107,7 @@ def rebuild(e,msgs,tr):
         for f in sorted(free,key=lambda f:f[1]-f[0]):
             if f[1]-f[0]>=need+3: cave=f; break
         if cave is None:
-            if borrow_prev(e,msgs,tr,k,body,free): continue
+            if borrow_prev(e,msgs,tr,k,body,free) or borrow_next(e,msgs,tr,k,body,free): continue
             raise RuntimeError('no space for msg %d (%d bytes)'%(k,need))
         a,b=cave
         e[a:a+3]=jmp(a,b)                 # guard: skip over cave
