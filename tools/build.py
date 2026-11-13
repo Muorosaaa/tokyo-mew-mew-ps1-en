@@ -26,7 +26,7 @@ from extra_sce import X as EXTRA
 from natural import N as _NAT
 MEM.update(_NAT)
 SKIPPED=[]
-SHORT={'_この先“遊歩の森”':'“Strolling Woods”','「りょうかいなのだ！」':'Roger, na no da！','「よかったらこれ……」':'Take this, if you like'}
+SHORT={'「すみません」':'Sorry.','_この先“遊歩の森”':'“Strolling Woods”','「りょうかいなのだ！」':'Roger, na no da！','「よかったらこれ……」':'Take this, if you like'}
 def build_sce():
     d=bytearray(open(_ROOT+'/orig/D_SCE.BIN','rb').read())
     B=entry_bounds(bytes(d)); report=[]
