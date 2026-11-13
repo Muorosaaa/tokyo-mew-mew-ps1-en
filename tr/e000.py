@@ -177,3 +177,7 @@ TR.update({265: 'Leave the rest to us,\nna no da！'})
 TR.update({266: "We're all together, so\nwe'll be okay."})
 # naturalness pass: lines that came from translation memory
 TR.update({267: 'Heh… I suppose so.\nGoes without saying.'})
+# naturalness pass: lines that came from translation memory
+TR.update({210: "Goodbye isn't forever."})
+# naturalness pass: lines that came from translation memory
+TR.update({225: 'I knew it！\nYou did something⁈'})
