@@ -43,7 +43,7 @@
 - Done and committed: script 0 (opening, rows 1-264), scripts 1-20 (rows to 2011), plus Akasaka's laugh everywhere. About 940 of ~2,740 unique dialogue lines reviewed. Batch 6 (scripts 5-6, 47 rewrites) built 2026-11-12: plus follow-up picks for rows 962, 972/1040, 1005, 1064 (1147 kept): D_SCE f94a19e1, EXE 9ecc3552, injected into build/ Track 1.
 - Batch 7 (scripts 7-10, 20 rewrites) built 2026-11-12, plus row 1175 (user pick B): D_SCE f7e91856, injected.
 - Batch 8 (scripts 11-16, 25 memory-line rewrites in tr/natural.py) built 2026-11-12, D_SCE 15e38995, injected.
-- Batch 9 (scripts 17-20, 22 rewrites) built 2026-11-12, D_SCE beaabaa2, injected; row 1981 (Kisshu, 'next time') waits for the user's pick (work/script/t9a.py / t9b.py).
+- Batch 9 (scripts 17-20, 22 rewrites) built 2026-11-12, plus row 1981 (user pick B): D_SCE 2fc24d0b, injected.
 - Next: script 21 onward, in entry order, skipping Japanese lines already reviewed in earlier scripts.
 - Workflow (see docs/decisions.md and AGENTS.md "Proofreading"): draft `work/script/natural_batchN.py` (P = {sheet row: (text, why)}), check `tools/fit.py`, run `python -X utf8 work/script/trial.py natural_batchN` until "all N fit" (trim with `work/script/room.py`), build the comparison sheet `TokyoMewMew_natural_batchN.xlsx` (Row, Speaker, Japanese, Current, Proposed, Why, Your pick, Copies in game), and apply with `work/script/apply.py` only after the user picks. Then build, check, dump, diff copies, commit.
 - Lines from scripts with a tr/eNNN.py are edited there; memory lines go in tr/natural.py (keyed by Japanese, every copy). build.SHORT gives a short fallback where one copy's box is too small (e.g. 「すみません」 -> "Sorry.").

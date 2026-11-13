@@ -74,4 +74,5 @@ N = {
 '「またにげたのだ～」': 'Ran away, na no da～',
 '「もうおそいかもしれないけど、/_まだ結果はでてないもん。/_後悔はあとでするものでしょ？': "It might be too late, but\nit's not over yet. Regrets\ncan wait till after, right？",
 '「おーっ！_なのだ～」': 'Yeah, na no da～！',
+'「今回は負けをみとめてあげるよ、/_でも次はそうはいかないからね！」': "I'll admit defeat this time,\nbut don't count on a repeat！",
 }
