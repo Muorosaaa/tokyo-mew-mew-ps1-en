@@ -51,7 +51,8 @@
 - Batch 13 (scripts 61-136, 29 rewrites; battle-hint item names now match the menu: Poison Herb, Zap Shroom) built 2026-11-12, D_SCE 1e999996, injected.
 - Batch 14 (script 224, 11 rewrites, user: use all) built 2026-11-12, D_SCE 27dd8efb, injected.
 - Row 4 back to 'civilian' (user, 2026-11-12). Batch 15 (script 225, 19 memory-line rewrites in tr/natural.py, user: use all) built 2026-11-12, D_SCE 98c96496, injected.
-- Next: scripts 241-247 (per-character endings), 249, 254: ~250 new lines.
+- Batch 16 (scripts 241-245, 247, 249, 254: 14 memory-line rewrites, user: use all) built 2026-11-12, D_SCE a8c1f552, injected.
+- Next: script 246 (~125 new lines), the last batch.
 - Workflow (see docs/decisions.md and AGENTS.md "Proofreading"): draft `work/script/natural_batchN.py` (P = {sheet row: (text, why)}), check `tools/fit.py`, run `python -X utf8 work/script/trial.py natural_batchN` until "all N fit" (trim with `work/script/room.py`), build the comparison sheet `TokyoMewMew_natural_batchN.xlsx` (Row, Speaker, Japanese, Current, Proposed, Why, Your pick, Copies in game), and apply with `work/script/apply.py` only after the user picks. Then build, check, dump, diff copies, commit.
 - Lines from scripts with a tr/eNNN.py are edited there; memory lines go in tr/natural.py (keyed by Japanese, every copy). build.SHORT gives a short fallback where one copy's box is too small (e.g. 「すみません」 -> "Sorry.").
 - tools/patcher.py: when no cave fits, an overlong box borrows spare bytes from the previous or next consecutive box (standard next-box command block or back-to-back boxes) unless a jump lands inside.
