@@ -8,13 +8,13 @@ TR = {
 9: "I-Ichigo-san！",
 10: "Kya！",
 13: "Huh？ She's gone…",
-15: "I keep going deeper, and I\nfeel like I'm watched～",
+15: "I keep going deeper, and\nsomeone's watching me～",
 17: "No waaay！\nHow'd we get separated～",
 33: "Ummm…{fc143e}……{fc143e}……\n{fc143e} ……{fc143e}……{fc143e}……{fc143e}nope.",
 48: F, 50: F, 52: F, 54: F, 57: F, 59: F, 61: F, 63: F,
 49: "How convenient…", 58: "How convenient…",
 51: "W-well, it worked out.", 60: "W-well, it worked out.",
-53: "It worked out～", 62: "It worked out～",
+53: 'Worked out, na no da～', 62: "It worked out～",
 55: "Go on, then.", 64: "Go on, then.",
 66: "Oh… good evening～",
 67: "Thank goodness. Listen,\nabout your friend…\num, Yuki-chan.",
@@ -36,3 +36,5 @@ TR = {
 85: "I'll save you right now！",
 86: "I'll save you right now！",
 }
+# naturalness pass: lines that came from translation memory
+TR.update({48: 'Found her！'})

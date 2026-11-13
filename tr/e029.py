@@ -43,15 +43,15 @@ TR = {
 58: "Um, Ichigo-san.\nWhere is Ringo-san\nstaying？",
 59: "Huh？ Oh…",
 61: "Come to think of it, I don't\nknow. But it'll work out.\n…Probably.",
-62: "I-is that so…",
+62: 'I-I wonder…',
 63: "Oh, I know！ If we go where\nwe met yesterday, maybe…",
 65: "Okay, let's get going！",
 66: "Ichigo onee-chan. Where\nshould we go, na no da？",
 68: "Where's Mango, na no da？",
 69: "That's a fruit！",
 70: "So is Ringo, na no da.",
-71: "You get it！",
-72: "So where's Ringo？",
+71: 'So you DO know！',
+72: "So where's Ringo,\nna no da？",
 73: "Ummm…",
 75: "Ahahaha…",
 76: "It'll work out, na no da.\nLet's just go！",
@@ -61,3 +61,5 @@ TR = {
 84: "…Waaah, I'm sorryyy～\nI don't knooow～",
 85: "…Sigh. Fine. Let's start\nwhere you met last night\nand search outward.",
 }
+# naturalness pass: lines that came from translation memory
+TR.update({28: 'Not that way, na no da.\nBest to turn back～'})
