@@ -46,6 +46,7 @@
 - Batch 9 (scripts 17-20, 22 rewrites) built 2026-11-12, plus row 1981 (user pick B): D_SCE 2fc24d0b, injected.
 - Batch 10 (scripts 21-22, 36 rewrites) built 2026-11-12, D_SCE f6fc7881, injected.
 - Batch 11 (scripts 24-37, 31 rewrites incl. 2368/2369 picks) built 2026-11-12, D_SCE 84bceca2, injected.
+- WIP patch 2026-11-12 (naturalness batches 1-11): release/TokyoMewMew_en_wip-2026-11-12.xdelta, Track 1 DDC80CE1 -> 9385E0EE, round-trip verified. xdelta3 rebuilt at ~/xd (session home).
 - Next: script 38 onward, in entry order, skipping Japanese lines already reviewed in earlier scripts.
 - Workflow (see docs/decisions.md and AGENTS.md "Proofreading"): draft `work/script/natural_batchN.py` (P = {sheet row: (text, why)}), check `tools/fit.py`, run `python -X utf8 work/script/trial.py natural_batchN` until "all N fit" (trim with `work/script/room.py`), build the comparison sheet `TokyoMewMew_natural_batchN.xlsx` (Row, Speaker, Japanese, Current, Proposed, Why, Your pick, Copies in game), and apply with `work/script/apply.py` only after the user picks. Then build, check, dump, diff copies, commit.
 - Lines from scripts with a tr/eNNN.py are edited there; memory lines go in tr/natural.py (keyed by Japanese, every copy). build.SHORT gives a short fallback where one copy's box is too small (e.g. 「すみません」 -> "Sorry.").
