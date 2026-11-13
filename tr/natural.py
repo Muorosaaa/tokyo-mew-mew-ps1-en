@@ -1,0 +1,26 @@
+# Naturalness-pass rewrites for lines that come from translation memory (scripts without a tr/eNNN.py).
+# Keyed by the Japanese line as msgs.dec() gives it; applies to every copy of that line in the game.
+N = {
+'「みんなであそぶのだ」': "Let's play together！",
+'「うっ……やっぱりマズイよね」': "Ugh… guess that's a bad idea.",
+'「はぁ……まぁいい。/_とにかくおとなしくしとけよ。/_いいな？」': 'Sigh… whatever.\nJust behave yourself.\nGot it？',
+'「いちご、おそいですわよ？」': "You're late, Ichigo.",
+'「いいから、こい」': 'Get over here.',
+'「昨日、お前たちが泉で戦った物体だ。/_こっちでもあれと同じ反応を<39>つ/_見つけた」': 'That thing you fought at the\nspring yesterday？ We found\n3 more just like it.',
+'「使われないよりはマシだろ？」': 'Beats being useless, right？',
+'「だからあやまったでしょ⁈」': 'I already apologized, okay⁈',
+'「ワイルドにした感じなのだ」': 'A wilder version, na no da！',
+'_ですが、立ち止まらずに<37>歩ずつ確実に/_クリアしていきましょう。/_みなさん、よろしくおねがいします」': "But let's not stop. Let's\nclear things one step at\na time. Good luck, everyone.",
+'「場所はわかっている。氷山のあった/_“山道”の奥の“どうくつ”だ」': 'We know. The “cave” at the\nend of the “Mountain Path.”',
+'「……あたしたちを止める理由はなに？」': '…Why are you stopping us？',
+'_<39>つ。仲間の意味をまるでわかって/_いないヤツがいる。そんなことでは/_最初から勝負は見えている。以上だ」': "Three. One of you doesn't get\nwhat being a team means. Like\nthat, you've already lost.",
+'「キッチンにミルフイユと紅茶を/_用意していますから食べてください」': "There's mille-feuille and\ntea in the kitchen for you.",
+'「どうですか？/_<12>・<04>・<01>は見つかりましたか？」': "How's it going？\nHave you found the RDA？",
+'「落ちついて進んでいけば/_かならず道は開けるはずです」': "If you keep calm and press\non, you'll find a way.",
+'「よかった～」': 'Oh, good～',
+'「くたくたなのだ～」': 'So tired, na no da～',
+'「ふふふ。みんな、この調子で/_もっともっとがんばるにゃん♪」': "Hehe. Let's keep it up and\ntry even harder, nya♪",
+'「完全クリア、おめでとー！」': 'Congrats on the 100% clear！',
+'「さすがね。あなたといっしょにいれて/_楽しかったわ。ありがとう」': 'Impressive. It was fun\nbeing with you. Thank you.',
+'「すごいのだ～」': 'Wow, na no da～',
+}

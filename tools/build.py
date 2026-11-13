@@ -22,6 +22,9 @@ _L2=_json.load(open(_ROOT+'/data/todo_all.json'))
 for _mod in ('mem_c1','mem_c2','mem_c3','mem_c4'):
     for _i,_v in _il.import_module(_mod).T.items(): MEM.setdefault(_L2[_i][0],_v)
 from extra_sce import X as EXTRA
+# naturalness-pass overrides for lines that come from translation memory (keyed by Japanese; tr/natural.py)
+from natural import N as _NAT
+MEM.update(_NAT)
 SKIPPED=[]
 SHORT={'_この先“遊歩の森”':'“Strolling Woods”','「りょうかいなのだ！」':'Roger, na no da！','「よかったらこれ……」':'Take this, if you like'}
 def build_sce():
