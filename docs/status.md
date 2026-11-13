@@ -40,8 +40,8 @@
 - User's card is at `work/card.mcd`, copy at `tools/debug/user_card.mcd` (tracked). Two saves in one game file: slot 01 map 34 Strolling Woods night, progress 16, Day 2 (route `tools/routes/strolling_exit.txt`); slot 02 map 44 Cottage Woods day, Day 2 (route `tools/routes/slot2_battle.txt`).
 
 ## Naturalness pass (started 2026-11-12, in progress)
-- Done and committed: script 0 (opening, rows 1-264), scripts 1, 2, 3, 4 (rows to 764), plus Akasaka's laugh everywhere. About 670 of ~2,740 unique dialogue lines reviewed.
-- Next: script 5 onward, in entry order, skipping Japanese lines already reviewed in earlier scripts.
+- Done and committed: script 0 (opening, rows 1-264), scripts 1-6 (rows to 1171), plus Akasaka's laugh everywhere. About 940 of ~2,740 unique dialogue lines reviewed. Batch 6 (scripts 5-6, 47 rewrites) built 2026-11-12: D_SCE 48d78448, EXE 9ecc3552, injected into build/ Track 1. Pending user pick: rows 962, 972/1040, 1005, 1064, 1147 (options A/B in work/script/natural_batch6b.py, both sets trial-fit).
+- Next: script 7 onward, in entry order, skipping Japanese lines already reviewed in earlier scripts.
 - Workflow (see docs/decisions.md and AGENTS.md "Proofreading"): draft `work/script/natural_batchN.py` (P = {sheet row: (text, why)}), check `tools/fit.py`, run `python -X utf8 work/script/trial.py natural_batchN` until "all N fit" (trim with `work/script/room.py`), build the comparison sheet `TokyoMewMew_natural_batchN.xlsx` (Row, Speaker, Japanese, Current, Proposed, Why, Your pick, Copies in game), and apply with `work/script/apply.py` only after the user picks. Then build, check, dump, diff copies, commit.
 - Lines from scripts with a tr/eNNN.py are edited there; memory lines go in tr/natural.py (keyed by Japanese, every copy). build.SHORT gives a short fallback where one copy's box is too small (e.g. 「すみません」 -> "Sorry.").
 - tools/patcher.py: when no cave fits, an overlong box borrows spare bytes from the previous or next consecutive box (standard next-box command block or back-to-back boxes) unless a jump lands inside.
