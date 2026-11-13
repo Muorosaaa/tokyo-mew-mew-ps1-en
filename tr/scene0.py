@@ -2,7 +2,7 @@ TR = {
 0: 'Yaaay！\nWe made it to the park！',
 1: "Hehe. So we'll be spending\n6 days here.",
 2: 'Nature everywhere, na no da！',
-3: "Have your fun, but don't do\nanything stupid, commoner.",
+3: "Have your fun, but don't do\nanything stupid, civilian.",
 4: 'Hmph！',
 5: "Now, now. We were lucky to get\nan early visit before opening.\nLet's enjoy it, Ichigo-san.",
 6: "Ah, yes. You're right.",
