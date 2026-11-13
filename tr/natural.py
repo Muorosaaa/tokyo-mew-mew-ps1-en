@@ -25,4 +25,6 @@ N = {
 '「すごいのだ～」': 'Wow, na no da～',
 '「ふふふ。<12><48><38><36><36><36>をこの機械に/_セットすればアクセスできますので、/_お好きな時に呼び出してください」': 'Just set R-2000 in this\ndevice to access it. Call\nit up whenever you like.',
 '「ふふ、お気持ちだけいただいておきます。/_期待におこたえできるものにしますから/_いちごさんたちもがんばってください」': "The thought alone is enough.\nI'll make it worth the wait,\nso do your best too.",
+'_だから、もしかしたら今ごろ/_姿がみえなくて心配してるかな……って」': "So I thought she might be\nworried she can't find\nYuki-chan…",
+'「じゃ、伝えにいけばいいのだ。/_そしたら安心なのだ」': "Then go tell her, na no da！\nShe won't worry then！",
 }
