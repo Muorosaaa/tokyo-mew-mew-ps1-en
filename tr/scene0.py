@@ -6,7 +6,7 @@ TR = {
 4: 'Hmph！',
 5: "Now, now. We were lucky to get\nan early visit before opening.\nLet's enjoy it, Ichigo-san.",
 6: "Ah, yes. You're right.",
-7: 'Hehe. Shall we head over\nto the cottage now？',
+7: 'Well then, shall we head over\nto the cottage now？',
 8: 'Indeed. Shall we be off,\nonee-sama？',
 9: '…Sure.',
 10: "Pudding's first！\nEarly bird wins, na no da！",

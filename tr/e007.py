@@ -136,3 +136,5 @@ TR = {
 149: "That's all for now, nya♥",
 187: 'Rows of technical books.',
 }
+# naturalness pass: lines that came from translation memory
+TR.update({53: 'Thank you very much.'})

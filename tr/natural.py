@@ -23,4 +23,6 @@ N = {
 '「完全クリア、おめでとー！」': 'Congrats on the 100% clear！',
 '「さすがね。あなたといっしょにいれて/_楽しかったわ。ありがとう」': 'Impressive. It was fun\nbeing with you. Thank you.',
 '「すごいのだ～」': 'Wow, na no da～',
+'「ふふふ。<12><48><38><36><36><36>をこの機械に/_セットすればアクセスできますので、/_お好きな時に呼び出してください」': 'Just set R-2000 in this\ndevice to access it. Call\nit up whenever you like.',
+'「ふふ、お気持ちだけいただいておきます。/_期待におこたえできるものにしますから/_いちごさんたちもがんばってください」': "The thought alone is enough.\nI'll make it worth the wait,\nso do your best too.",
 }
