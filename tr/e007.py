@@ -1,7 +1,7 @@
 # script entry 7 – Pudding missing, search, dinner, Mashio hurt, iceberg
 TR = {
 2: "Pudding-san went out and\nhasn't come back. After that\nChimera Anima… I'm worried.",
-3: "Dinner's soon, so won't she\ncome back？ And I doubt she'd\nlose to a Chimera Anima.",
+3: "It's nearly dinner. Surely\nshe'll be back？ And I doubt\nshe'd lose to one of those.",
 4: 'Maybe, but…',
 5: "\u3000「Let's go find her！」\n\u3000「She'll be fine」",
 6: 'Ichigo-san…',
