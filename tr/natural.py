@@ -147,7 +147,7 @@ N = {
 '「あっちゃ～_ちょっとだいじょうぶ？」': 'Uh-oh～ Hey,\nare you okay？',
 '「立てる？_はい、つかまって」': 'Can you stand？\nGrab my hand.',
 '「だいじょうぶ……？/_なにかひろったのだ」': "I'm fine… Huh？\nI found something.",
-'「負けてもいいの？」': 'Fine losing, then？',
+'「負けてもいいの？」': 'You want to lose？',
 '「あたしたちが休んでいるあいだに/_あの<38>人が先に見つけてしまうかも/_しれないわ」': 'While we rest, the other\ntwo might find her first.',
 '「あたしたちが休んでいるあいだに/_あの<38>人が先に見つけてしまうかも/_しれないわ。そうなれば負けよ」': 'While we rest, the other\ntwo might find her first.\nThen we lose.',
 '「ふふ、そうですわ。赤坂さんから紅茶を/_いただいてきましたの。さ、おふたりとも/_おすわりになって」': 'Hehe, indeed. I brought tea\nfrom Akasaka-san. Now, do\nsit down, both of you.',
