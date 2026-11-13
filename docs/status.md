@@ -40,7 +40,7 @@
 - User's card is at `work/card.mcd`, copy at `tools/debug/user_card.mcd` (tracked). Two saves in one game file: slot 01 map 34 Strolling Woods night, progress 16, Day 2 (route `tools/routes/strolling_exit.txt`); slot 02 map 44 Cottage Woods day, Day 2 (route `tools/routes/slot2_battle.txt`).
 
 ## Naturalness pass (started 2026-11-12, in progress)
-- Done and committed: script 0 (opening, rows 1-264), scripts 1-51 (rows to 3162), plus Akasaka's laugh everywhere. 1,412 + 195 = ~1,600 of 2,723 unique dialogue lines reviewed (count: unique Japanese in work/script/script.json rows). Batch 6 (scripts 5-6, 47 rewrites) built 2026-11-12: plus follow-up picks for rows 962, 972/1040, 1005, 1064 (1147 kept): D_SCE f94a19e1, EXE 9ecc3552, injected into build/ Track 1.
+- Done and committed: script 0 (opening, rows 1-264), scripts 1-136 (rows to 4232), plus Akasaka's laugh everywhere. 1,412 + 195 = ~1,600 of 2,723 unique dialogue lines reviewed (count: unique Japanese in work/script/script.json rows). Batch 6 (scripts 5-6, 47 rewrites) built 2026-11-12: plus follow-up picks for rows 962, 972/1040, 1005, 1064 (1147 kept): D_SCE f94a19e1, EXE 9ecc3552, injected into build/ Track 1.
 - Batch 7 (scripts 7-10, 20 rewrites) built 2026-11-12, plus row 1175 (user pick B): D_SCE f7e91856, injected.
 - Batch 8 (scripts 11-16, 25 memory-line rewrites in tr/natural.py) built 2026-11-12, D_SCE 15e38995, injected.
 - Batch 9 (scripts 17-20, 22 rewrites) built 2026-11-12, plus row 1981 (user pick B): D_SCE 2fc24d0b, injected.
@@ -48,7 +48,8 @@
 - Batch 11 (scripts 24-37, 31 rewrites incl. 2368/2369 picks) built 2026-11-12, D_SCE 84bceca2, injected.
 - WIP patch 2026-11-12 (naturalness batches 1-11): release/TokyoMewMew_en_wip-2026-11-12.xdelta, Track 1 DDC80CE1 -> 9385E0EE, round-trip verified. xdelta3 rebuilt at ~/xd (session home).
 - Batch 12 (scripts 38-51, 41 rewrites incl. picks for 2907/2914/2921/2965/3023) built 2026-11-12, D_SCE d5806b99, injected.
-- Next: script 61 onward (no new lines in 52-60), in entry order, skipping Japanese lines already reviewed in earlier scripts.
+- Batch 13 (scripts 61-136, 29 rewrites; battle-hint item names now match the menu: Poison Herb, Zap Shroom) built 2026-11-12, D_SCE 1e999996, injected.
+- Next: the endings, entry 224 onward, in entry order, skipping Japanese lines already reviewed in earlier scripts.
 - Workflow (see docs/decisions.md and AGENTS.md "Proofreading"): draft `work/script/natural_batchN.py` (P = {sheet row: (text, why)}), check `tools/fit.py`, run `python -X utf8 work/script/trial.py natural_batchN` until "all N fit" (trim with `work/script/room.py`), build the comparison sheet `TokyoMewMew_natural_batchN.xlsx` (Row, Speaker, Japanese, Current, Proposed, Why, Your pick, Copies in game), and apply with `work/script/apply.py` only after the user picks. Then build, check, dump, diff copies, commit.
 - Lines from scripts with a tr/eNNN.py are edited there; memory lines go in tr/natural.py (keyed by Japanese, every copy). build.SHORT gives a short fallback where one copy's box is too small (e.g. 「すみません」 -> "Sorry.").
 - tools/patcher.py: when no cave fits, an overlong box borrows spare bytes from the previous or next consecutive box (standard next-box command block or back-to-back boxes) unless a jump lands inside.
