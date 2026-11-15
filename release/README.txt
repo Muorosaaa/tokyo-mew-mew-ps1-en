@@ -1,5 +1,5 @@
 Tokyo Mew Mew ~Toujou! Shin Mew Mew~ Minna Issho ni Gohoushi Suru Nyan (PS1)
-English Fan Translation Patch  -  v1.1  (2026-11-12)
+English Fan Translation Patch  -  v1.2  (2026-11-15)
 ===========================================================================
 
 Japan-only PlayStation RPG by Takara / Winkysoft (2002, SLPM-87178).
@@ -12,6 +12,11 @@ spot of leftover Japanese. Fixes will come in later versions.
 Translation and code: Claude (an AI by Anthropic). The translation, the
 text and graphics tools, and the patch were all made by Claude.
 
+
+WHAT'S NEW IN v1.2
+------------------
+- The title screen logo is now in English: "Tokyo Mew Mew - Here Comes the
+  New Mew Mew! We'll All Be at Your Service, Nya".
 
 WHAT'S NEW IN v1.1
 ------------------
@@ -26,8 +31,8 @@ WHAT'S NEW IN v1.1
 - Akasaka no longer giggles "Hehe": he laughs "Ha ha" or just smiles.
 - Item names in battle hints now match the item menu.
 
-Already patched v1.0? Apply v1.1 to your ORIGINAL Japanese Track 1, not to
-the v1.0 patched file. Your saves keep working.
+Already patched an older version? Apply v1.2 to your ORIGINAL Japanese
+Track 1, not to the previously patched file. Your saves keep working.
 
 
 WHAT'S TRANSLATED
@@ -36,16 +41,17 @@ WHAT'S TRANSLATED
 - Menus, items, skills and their descriptions, save/load messages
 - Character profiles, album, item trade, guidebook (88 topics), animal
   encyclopedia (42 animals), cast list, ranger diary
-- On-screen graphics: title menu, location banners, battle commands and HUD,
-  field menu, name plates, Level Up!, Day 1-6 cards, Game Over, the boot
-  warning screen, and the comic sound effects in battles and cutscenes
+- On-screen graphics: title logo, title menu, location banners, battle
+  commands and HUD, field menu, name plates, Level Up!, Day 1-6 cards, Game
+  Over, the boot warning screen, and the comic sound effects in battles and
+  cutscenes
 
 Names follow the original Japanese (Ichigo, Mint, Lettuce, Pudding, Zakuro,
 Ringo, Shirogane, Akasaka, Kisshu). Honorifics are kept (-san, onee-chan,
 onee-sama), Ichigo keeps her "nya" and Pudding her "na no da".
 
 Left in Japanese on purpose:
-- The title logo
+- The logo in the opening animation (the title screen logo is English)
 - The staff credits (most staff names can't be romanized reliably)
 - The memory card save titles (only shown by the PS1/emulator card manager)
 
@@ -56,7 +62,7 @@ WHAT YOU NEED
    files (Track 1 and Track 2) plus a .cue file. This patch contains no
    game data, so you have to supply the game yourself.
 
-2. The patch file from this zip: TokyoMewMew_en_v1.1.xdelta
+2. The patch file from this zip: TokyoMewMew_en_v1.2.xdelta
 
 3. A patching tool. No Python, command line or programming needed.
    Pick ONE of these:
@@ -84,14 +90,14 @@ Option A: Rom Patcher JS (in your browser)
   2. Next to "ROM file", choose your "(Track 1).bin" file. It's a big file
      (about 590 MB), so give it a moment to load. The page shows its
      CRC32; it should say DDC80CE1.
-  3. Next to "Patch file", choose TokyoMewMew_en_v1.1.xdelta.
+  3. Next to "Patch file", choose TokyoMewMew_en_v1.2.xdelta.
   4. Click "Apply patch". Your browser downloads the patched Track 1.
   5. Rename the downloaded file to:  TokyoMewMew_en (Track 1).bin
 
 Option B: Delta Patcher (Windows)
   1. Open Delta Patcher.
   2. "Original file": choose your "(Track 1).bin" file.
-  3. "XDelta patch": choose TokyoMewMew_en_v1.1.xdelta.
+  3. "XDelta patch": choose TokyoMewMew_en_v1.2.xdelta.
   4. Click "Apply patch". Delta Patcher writes the patched file in place of
      your Track 1 (that's why you made a copy first).
 
@@ -113,8 +119,8 @@ FILE "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan (Ja
   8. Load the .cue file in your emulator (DuckStation, for example).
 
 To check the patch worked, the patched Track 1 should be:
-     CRC32 CEB31835   MD5 8387bfec03b674264393ec49ee91a558
-     SHA-1 fd6b3eed40e6ab857b550b695f8124cb8d309013
+     CRC32 E980D290   MD5 d5c86ea40553f42776c49643cb7e3f04
+     SHA-1 077e8f17fb9500c98b83fb7cf7122c11ba107a89
 (Rom Patcher JS shows the CRC32 if you load the patched file as the ROM.)
 
 Tested in DuckStation and PCSX-Redux. Saves from the Japanese version keep
@@ -124,9 +130,9 @@ working with the patched game.
 FOR ADVANCED USERS
 ------------------
 With xdelta3 on the command line:
-  xdelta3 -d -s "original (Track 1).bin" TokyoMewMew_en_v1.1.xdelta "TokyoMewMew_en (Track 1).bin"
+  xdelta3 -d -s "original (Track 1).bin" TokyoMewMew_en_v1.2.xdelta "TokyoMewMew_en (Track 1).bin"
 
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.1.xdelta   825,516 bytes   CRC32 C7563F4E
+TokyoMewMew_en_v1.2.xdelta   837,634 bytes   CRC32 1D86E7C3
