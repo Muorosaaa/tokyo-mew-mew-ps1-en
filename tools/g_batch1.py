@@ -1,7 +1,7 @@
 import os as _os; _ROOT=_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
 import sys; sys.path.insert(0,_ROOT+'/tools')
 from gedit import *
-import g_title,g_loc,g_batch2,g_batch3,g_boot,g_day
+import g_title,g_loc,g_batch2,g_batch3,g_boot,g_day,g_logo_en
 DV=lambda *s:[('dv',x,0) for x in s]
 DVT=lambda *s:[('dv',x,1) for x in s]
 DVC=lambda *s:[('dvc',x,0) for x in s]
@@ -59,5 +59,5 @@ def movies(G):
     rowfill(px,x0,x1,ignore=(15,1,2,7))
     text_block(px,['Movie Collection'],(x0+8,8,x1-8,h-9),DV(14,13,12,11),[15,15,1,2],rings=[(7,1)],shadow=(8,1,1))
     G.put(0,px)
-JOBS={2:g_batch3.tags,53:g_batch3.profile,0:g_batch2.run,9:g_title.run,33:g_loc.run,**{k:sound for k in range(40,49)},30:rooms,50:plaques,56:trade,24:(lambda G:(explore(G),g_day.day(G))),20:movies,55:g_boot.warn,   # 1: g_logo.run (ribbon) dropped 2026-11-08, user prefers the original logo
+JOBS={1:g_logo_en.run,2:g_batch3.tags,53:g_batch3.profile,0:g_batch2.run,9:g_title.run,33:g_loc.run,**{k:sound for k in range(40,49)},30:rooms,50:plaques,56:trade,24:(lambda G:(explore(G),g_day.day(G))),20:movies,55:g_boot.warn,   # 1: user's English logo art (tools/g_logo_en.py, 2026-11-15); the 2026-11-08 ribbon-only g_logo.py stays unused
       **{83+k:(lambda G,k=k: g_loc.run_single(G,g_loc.NAMES[k])) for k in range(15)}}
