@@ -89,6 +89,8 @@ def build_exe():
     # 0x228a0-0x22aa3 is a data table, not text, and entry 127 of 0x1f212 points at it (fixed 2026-11-09:
     # the old end 0x22aa3 / 128 entries filled that table with FF padding)
     nd,n,free=seqblock.apply(nd,0x1f412,0x228a0,[(0x1f112,64),(0x1f212,127)],ETR); print('animal book: %d strings, %d bytes free'%(n,free))
+    import boxes
+    nd,n=boxes.apply(d,nd); print('battle popup boxes widened: %d (+ skill-learned box widths)'%n)
     return nd
 if __name__=='__main__':
     sce,rep=build_sce(); exe=build_exe()
