@@ -15,6 +15,8 @@ text and graphics tools, and the patch were all made by Claude.
 
 WHAT'S NEW IN v1.3
 ------------------
+- Cleaned-up boot warning screen: Ichigo's skirt and boot are redrawn where
+  the Japanese text used to cross them.
 - Fixed: the name of a newly learned skill was cut off in battle.
 - Clearer wording for some skill explanations and a skill description.
 - Fixed the Blue Knight being called "she".
@@ -142,4 +144,4 @@ With xdelta3 on the command line:
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.3.xdelta   837,617 bytes   CRC32 07F6D817
+TokyoMewMew_en_v1.3.xdelta   837,889 bytes   CRC32 72F592FD

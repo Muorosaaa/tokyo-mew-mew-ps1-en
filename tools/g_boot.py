@@ -82,6 +82,28 @@ def inpaint(px,mask,boot,dark):
 
 SKIRT=(176,190,129,144)   # x0,x1,y0,y1: skirt under は's right stroke, refilled from the pleats 13 px to the right
 
+# The user's cleaned-up screen (2026-11-23, data/boot/boot_en_source.png, an enlarged screenshot): the skirt is
+# redrawn where は's removal had cut its lower-left corner, and the left boot's leftover lettering specks are gone.
+# The art is mapped back onto the 320x240 grid (registration found by fitting it to this screen), and only the
+# skirt and boot areas are taken from it, each pixel that changed snapped to a colour this screen already uses
+# nearby, so the rest of the image stays pixel-exact.
+USER=_ROOT+'/data/boot/boot_en_source.png'
+REG=(4.545,4.84,-9.5,2)                                  # x scale, y scale, x offset, y offset (source px)
+AREAS=((165,115,262,153),(148,163,202,216))             # x0,y0,x1,y1: skirt, left boot
+def user_art(px,pal):
+    from PIL import Image
+    sx,sy,ox,oy=REG; U=Image.open(USER).convert('RGB')
+    P=Image.new('RGB',(U.width+80,U.height+160)); P.paste(U,(40,40))
+    W=np.asarray(P.resize((320,240),Image.BOX,box=(ox+40,oy+40,ox+40+sx*320,oy+40+sy*240)),float)
+    rgb=np.array([c[:3] for c in pal],float); px=px.copy()
+    for x0,y0,x1,y1 in AREAS:
+        near=set(np.unique(px[max(0,y0-6):y1+6,max(0,x0-6):x1+6]).tolist())-{232,233,234,166,168,58}
+        cand=np.array(sorted(near)); cur=rgb[px[y0:y1,x0:x1]]; src=W[y0:y1,x0:x1]
+        ch=np.abs(src-cur).mean(2)>24
+        d=((src[...,None,:]-rgb[cand][None,None])**2).sum(-1); best=cand[d.argmin(-1)]
+        sub=px[y0:y1,x0:x1]; sub[ch]=best[ch]
+    return px
+
 def warn(G):
     px=G.px(0)
     m,boot,dark=erase_mask(px,G.pal(0))
@@ -98,6 +120,7 @@ def warn(G):
         for x in range(206,241):
             if min(pal[px[y,x]][:3])>=200: px[y,x]=GREEN
     opts=[("mpr",s,0) for s in range(26,12,-1)]
+    px=user_art(px,pal)
     text_block(px,LINES,(4,127,152,200),opts,[232,232,233,234],rings=[(166,1),(168,2)],shadow=(58,1,1),gap=7)
     G.put(0,px)
 
