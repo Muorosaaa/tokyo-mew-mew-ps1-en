@@ -27,8 +27,8 @@ TR={
 132:"Got away！",
 133:"Try again\nSave\nQuit game",
 135:"{fc2520}<08><7f><42><08>{fc0420}Whole party{fc0020}\nUse on everyone？",   # names dropped (3 never fit one line), 2026-11-09
-136:"{fc2520}<08><7f><42><08>{fc2920}<1f><61><42><08>{fc0820}{fcffff}{fc0020} taught you\n{fc0420}{fcffff}{fc0020}！",
-137:"{fc2520}<08><7f><42><08>{fc2920}<1f><61><42><08>{fc0820}{fcffff}{fc0020} learned\n{fc0420}{fcffff}{fc0020}！",
+136:"{fc2520}<08><7f><42><08>{fc2920}<1f><61><42><08>{fc0820}{fcffff}{fc0020} taught you {fc0420}{fcffff}{fc0020}！",
+137:"{fc2520}<08><7f><42><08>{fc2920}<1f><61><42><08>{fc0820}{fcffff}{fc0020} learned {fc0420}{fcffff}{fc0020}！",
 138:'\n'.join(FULL),
 139:"They cut you off！",
 140:"Couldn't escape！",

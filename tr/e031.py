@@ -7,7 +7,7 @@ TR = {
 7: "⁉",
 9: "I-Ichigo-san！",
 10: "Kya！",
-13: "Huh？ She's gone…",
+13: "Huh？ They're gone…",
 15: "I keep going deeper, and\nsomeone's watching me～",
 17: "No waaay！\nHow'd we get separated～",
 33: "Ummm…{fc143e}……{fc143e}……\n{fc143e} ……{fc143e}……{fc143e}……{fc143e}nope.",

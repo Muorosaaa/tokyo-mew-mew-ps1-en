@@ -9,7 +9,7 @@ TR={
 '戦闘中に使え、逃げることができます。/負けそうな時はムリをせずに使いましょう。/でもたまに失敗することも……':'Use in battle to run away.\nUse it if you\'re about to lose.\nBut it sometimes fails…',
 '戦闘中に使え、にらんで相手をびびらせます。/使った相手の「すばやさ」が下がります。':'Use in battle to glare and scare a\nfoe. Lowers that foe\'s “Speed.”',
 '戦闘中に使え、誰か<37>人の「たいりょく」を/<3b><36>回復させます。':'Use in battle to restore 50 HP\nto one person.',
-'セットしていれば効果があります。/「こうどうメンバー」なら「やるき」が/ふえる時にボーナスがつきます（仲間も）。':'Works while set. In the Active\nParty, “Spirit” gains get a bonus.\n（Allies too.）',
+'セットしていれば効果があります。/「こうどうメンバー」なら「やるき」が/ふえる時にボーナスがつきます（仲間も）。':'Works while set. Boosts\n“Spirit” gains for the whole\nActive Party.',
 'セットしていれば効果があります。/見事なステップで「すばやさ」が上がります。':'Works while set. Fancy footwork\nraises “Speed.”',
 'セットしていれば効果があります。/「やるき」がふえるときにボーナスが/つきます（自分だけ）。':'Works while set. “Spirit” gains\nget a bonus. （Self only.）',
 'セットしていれば効果があります。/たいりょく回復などのアイテムを使ったとき/普通より効果が高くなります。':'Works while set. Healing items and\nthe like work better than usual.',
