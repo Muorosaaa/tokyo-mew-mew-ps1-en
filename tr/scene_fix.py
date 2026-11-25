@@ -575,3 +575,33 @@ S = {
     72: 'Thank you for everything.',  # sheet row 5290
 },
 }
+
+# Consistency pass (user picks 2026-11-25: RDA, “Squeak”, villain laughs by length, Mint "Hm hm").
+# Written by work/script/consist.py.
+for _n, _d in {
+0: {27: 'I hear there are lots of\nRed Data Animals（RDA）\nhere, too！', 29: "We can't touch the RDA, but\nwe can play with the others！\nDoesn't that sound fun？", 36: 'Heh heh heh…\nFancy meeting you here.', 48: 'Heh heh…', 228: 'Heh heh… like it？ Oh right,\nI made them stronger,\nso watch out.'},
+12: {13: 'Have fun while you can.\nHeh heh heh… see ya.'},
+13: {5: 'Have fun while you can.\nHeh heh heh… see ya.'},
+14: {91: "…But from here, it won't\nbe so easy… heh heh heh."},
+16: {17: 'Have fun while you can.\nHeh heh heh… see ya.'},
+17: {10: 'Heh heh…', 22: 'Heh heh…', 78: 'Heh heh…', 106: 'Heh heh…'},
+20: {62: "Heh heh heh… Enjoy your\nreunion while you can.\nYou'll be parted soon.", 74: 'Heh heh…', 89: 'Heh heh…', 93: "Heh heh. The spots with the\n“rocks” had a weird shield.\nWe couldn't get close.", 105: "Heh heh heh… shame I can't\nplay more, but I'll play\nwith you properly next time,", 114: '…Hm hm. Indeed. Giving up\nwithout trying is out\nof the question.'},
+22: {0: 'Heh heh heh…\nHahahaha！', 49: 'Heh heh heh…', 109: 'Heh heh heh…', 141: "I'll gladly take that power\noff your hands… heh heh heh…"},
+36: {10: 'Just kidding. Hm hm…\nSame as ever, I see.', 26: 'Just kidding. Hm hm…\nSame as ever, I see.'},
+37: {10: 'But not yet～\nNot till I tease you more,\nIchigo. Heh heh heh…', 18: "Heh heh. That won't work\non me.", 26: "Heh heh, hey, Ichigo. Promises\nonly matter 'cause\nthey get broken.", 34: "Heh heh, uh-uh, don't move.\nOne little squeeze and\nthis creature dies."},
+39: {84: "…But from here, it won't\nbe so easy… heh heh heh."},
+46: {41: 'Hm hm, oh yes. I brought tea\nfrom Akasaka-san. Now, do\nsit down, both of you.'},
+47: {3: 'Squeak'},
+48: {1: 'Squeak！'},
+51: {22: "Ally？ Heh heh… no.\nHe's merely my\nsubordinate now.", 34: 'Heh heh. Very well.\nThen prove it.\n…Hah！', 78: 'Heh heh…？\nThat pendant…', 86: 'Heh heh… Is that your best？\nAny more is pointless…', 107: 'Heh heh heh…', 123: 'Heh heh, how interesting.\nVery well, you pass. You are\nworthy foes. Heh heh heh…'},
+63: {17: 'Have fun while you can.\nHeh heh heh… see ya.'},
+86: {19: 'Well, good luck…\nheh heh.'},
+87: {19: 'Well, good luck…\nheh heh.'},
+94: {19: 'Well, good luck…\nheh heh.'},
+95: {19: 'Well, good luck…\nheh heh.'},
+123: {9: 'Have fun while you can.\nHeh heh heh… see ya.'},
+136: {9: 'Heh heh…'},
+241: {57: 'Hm hm…', 60: "Hm hm. Well, Akasaka-san's\nsweets are special.", 62: 'Hm hm…', 68: "Hm hm, I know you're worried\nabout Ringo, but you aren't\nher only friend, you know？"},
+246: {159: 'I said there are RDAs\nthat need special\nconditions. Here they are.', 170: '  「Nothing」\n  「How do I take photos？」\n  「Which RDAs？」', 188: 'I said there are RDAs\nthat need special\nconditions. Here they are.'},
+}.items():
+    S.setdefault(_n, {}).update(_d)
