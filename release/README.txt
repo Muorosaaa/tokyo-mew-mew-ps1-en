@@ -155,8 +155,8 @@ FILE "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan (Ja
   8. Load the .cue file in your emulator (DuckStation, for example).
 
 To check the patch worked, the patched Track 1 should be:
-     CRC32 2FED5662   MD5 cb9f799939ad4dd448c91c08ffc7f8d4
-     SHA-1 39dd3c4d0da97bab1f6d69eeeedb3da3f41b3c39
+     CRC32 F29A8BA9   MD5 a395e4f66296be95db4447877bf4df59
+     SHA-1 22863e570a260bd2c5e3f50a36ed24974d4ecfdd
 (Rom Patcher JS shows the CRC32 if you load the patched file as the ROM.)
 
 Tested in DuckStation and PCSX-Redux. Saves from the Japanese version keep
@@ -171,4 +171,4 @@ With xdelta3 on the command line:
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.5.xdelta   841,021 bytes   CRC32 EEFB10C6
+TokyoMewMew_en_v1.5.xdelta   841,043 bytes   CRC32 B691F977
