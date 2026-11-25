@@ -1,5 +1,5 @@
 Tokyo Mew Mew ~Toujou! Shin Mew Mew~ Minna Issho ni Gohoushi Suru Nyan (PS1)
-English Fan Translation Patch  -  v1.4  (2026-11-23)
+English Fan Translation Patch  -  v1.5  (2026-11-25)
 ===========================================================================
 
 Japan-only PlayStation RPG by Takara / Winkysoft (2002, SLPM-87178).
@@ -12,6 +12,22 @@ spot of leftover Japanese. Fixes will come in later versions.
 Translation and code: Claude (an AI by Anthropic). The translation, the
 text and graphics tools, and the patch were all made by Claude.
 
+
+WHAT'S NEW IN v1.5
+------------------
+- A second full review of the script, line by line against the Japanese:
+  about 350 lines rewritten (over 500 text boxes in the game).
+- Fixed lines that said the wrong thing: the penguin hint now sends you to
+  floor 3 (it said 5), Gateau no longer asks why Ichigo transforms when
+  she has just changed back, Pudding's family is the Fong family, and the
+  penguin Yuki is "she" everywhere.
+- Replies that didn't answer the line before them now do, and jokes and
+  callbacks that got lost are back (Mint's ghost story, Pudding's "Uncle
+  Gateau", Zakuro's "worth more" gift).
+- Names and terms match everywhere: Iceberg Hideout, Item Trade, Chimera
+  Anima, Lovely Flower Field, Singing Wind Plains.
+- Voices are more consistent: Mint's laugh is her own, Lettuce stays
+  polite, and Pudding says "na no da" at most once per box.
 
 WHAT'S NEW IN v1.4
 ------------------
@@ -47,7 +63,7 @@ WHAT'S NEW IN v1.1
 - Akasaka no longer giggles "Hehe": he laughs "Ha ha" or just smiles.
 - Item names in battle hints now match the item menu.
 
-Already patched an older version? Apply v1.4 to your ORIGINAL Japanese
+Already patched an older version? Apply v1.5 to your ORIGINAL Japanese
 Track 1, not to the previously patched file. Your saves keep working.
 
 
@@ -78,7 +94,7 @@ WHAT YOU NEED
    files (Track 1 and Track 2) plus a .cue file. This patch contains no
    game data, so you have to supply the game yourself.
 
-2. The patch file from this zip: TokyoMewMew_en_v1.4.xdelta
+2. The patch file from this zip: TokyoMewMew_en_v1.5.xdelta
 
 3. A patching tool. No Python, command line or programming needed.
    Pick ONE of these:
@@ -106,14 +122,14 @@ Option A: Rom Patcher JS (in your browser)
   2. Next to "ROM file", choose your "(Track 1).bin" file. It's a big file
      (about 590 MB), so give it a moment to load. The page shows its
      CRC32; it should say DDC80CE1.
-  3. Next to "Patch file", choose TokyoMewMew_en_v1.4.xdelta.
+  3. Next to "Patch file", choose TokyoMewMew_en_v1.5.xdelta.
   4. Click "Apply patch". Your browser downloads the patched Track 1.
   5. Rename the downloaded file to:  TokyoMewMew_en (Track 1).bin
 
 Option B: Delta Patcher (Windows)
   1. Open Delta Patcher.
   2. "Original file": choose your "(Track 1).bin" file.
-  3. "XDelta patch": choose TokyoMewMew_en_v1.4.xdelta.
+  3. "XDelta patch": choose TokyoMewMew_en_v1.5.xdelta.
   4. Click "Apply patch". Delta Patcher writes the patched file in place of
      your Track 1 (that's why you made a copy first).
 
@@ -135,8 +151,8 @@ FILE "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan (Ja
   8. Load the .cue file in your emulator (DuckStation, for example).
 
 To check the patch worked, the patched Track 1 should be:
-     CRC32 E980D290   MD5 d5c86ea40553f42776c49643cb7e3f04
-     SHA-1 077e8f17fb9500c98b83fb7cf7122c11ba107a89
+     CRC32 E8C16D16   MD5 b8fb4c3250f6b7eaac28d1a543d1be66
+     SHA-1 b2b0ef41da5af699b9b9509d1889a86ce4e8b897
 (Rom Patcher JS shows the CRC32 if you load the patched file as the ROM.)
 
 Tested in DuckStation and PCSX-Redux. Saves from the Japanese version keep
@@ -146,9 +162,9 @@ working with the patched game.
 FOR ADVANCED USERS
 ------------------
 With xdelta3 on the command line:
-  xdelta3 -d -s "original (Track 1).bin" TokyoMewMew_en_v1.4.xdelta "TokyoMewMew_en (Track 1).bin"
+  xdelta3 -d -s "original (Track 1).bin" TokyoMewMew_en_v1.5.xdelta "TokyoMewMew_en (Track 1).bin"
 
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.4.xdelta   840,331 bytes   CRC32 473B0855
+TokyoMewMew_en_v1.5.xdelta   840,887 bytes   CRC32 BE9DE387
