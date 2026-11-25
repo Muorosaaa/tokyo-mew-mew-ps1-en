@@ -25,9 +25,11 @@ WHAT'S NEW IN v1.5
   callbacks that got lost are back (Mint's ghost story, Pudding's "Uncle
   Gateau", Zakuro's "worth more" gift).
 - Names and terms match everywhere: Iceberg Hideout, Item Trade, Chimera
-  Anima, Lovely Flower Field, Singing Wind Plains.
-- Voices are more consistent: Mint's laugh is her own, Lettuce stays
-  polite, and Pudding says "na no da" at most once per box.
+  Anima, Lovely Flower Field, Singing Wind Plains, and "RDA" for the
+  Red Data Animals.
+- Voices are more consistent: Mint's laugh is her own, Kisshu's and
+  Gateau's laughs follow the Japanese, Lettuce stays polite, and
+  Pudding says "na no da" at most once per box.
 - The ellipsis (…) now looks like English: three dots on the baseline,
   like full stops, instead of the Japanese mid-height dots.
 
@@ -153,8 +155,8 @@ FILE "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan (Ja
   8. Load the .cue file in your emulator (DuckStation, for example).
 
 To check the patch worked, the patched Track 1 should be:
-     CRC32 46D6F01A   MD5 296e8c4d77a26019e26e5c714a0cb863
-     SHA-1 f2f7f8729b2d0e4f810b2d0a399bc02a1abeaad2
+     CRC32 2FED5662   MD5 cb9f799939ad4dd448c91c08ffc7f8d4
+     SHA-1 39dd3c4d0da97bab1f6d69eeeedb3da3f41b3c39
 (Rom Patcher JS shows the CRC32 if you load the patched file as the ROM.)
 
 Tested in DuckStation and PCSX-Redux. Saves from the Japanese version keep
@@ -169,4 +171,4 @@ With xdelta3 on the command line:
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.5.xdelta   841,062 bytes   CRC32 DA9DD138
+TokyoMewMew_en_v1.5.xdelta   841,021 bytes   CRC32 EEFB10C6
