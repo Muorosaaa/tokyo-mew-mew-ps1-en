@@ -48,6 +48,26 @@ if SCRIPT then
     L.log(string.format("f%d script load -> entry %d", frame, SCRIPT))
   end)
 end
+-- TEXTFILE=path: show chosen dialogue boxes in the opening. The file holds ready-made script bytes (per message the
+-- 14-byte box set-up `7b SPK 00 1f 0c FACE 10 1f 08 0a 04 00 28 00` + the message `78 ..` up to its FF, then a
+-- self-jump), written by warp.py --lines from build/D_SCE.BIN. As soon as entry 0 (the New Game opening) is in RAM
+-- at 0x801E8000 and before its first box (Ichigo's "Yaaay！", set-up at entry offset 0x473), the block is copied over it, so the
+-- game draws each chosen line in its real box, one per circle press.
+if TEXTFILE then
+  local f = assert(io.open(TEXTFILE, "rb")); local blk = f:read("a"); f:close()
+  local HEAD = { 0xa0, 0x00, 0x6b, 0x01, 0x84, 0x01, 0x82, 0x01 }     -- first bytes of entry 0
+  local PRE = { 0x7b, 0x01, 0x00, 0x1f, 0x0c, 0x00, 0x10 }              -- entry 0 offset 0x473: the opening's first box
+  local BASE, AT = 0x1E8000, 0x1E8000 + 0x473
+  local placed = false
+  L.on_frame(function(n)
+    if placed then return end
+    for k = 1, #HEAD do if mem[BASE + k - 1] ~= HEAD[k] then return end end
+    for k = 1, #PRE do if mem[AT + k - 1] ~= PRE[k] then return end end
+    for k = 1, #blk do mem[AT + k - 1] = blk:byte(k) end
+    placed = true
+    L.log(string.format("f%d textfile: %d bytes placed at entry 0 offset 0x473", n, #blk))
+  end)
+end
 -- KILLPARTY=1: Game Over on demand. Battle units: 0x44-byte records at 0x801190F4 + i*0x44 (i 0-2 party, then
 -- enemies; base pointer at 0x800FEACC). Record +0x0A flags (bit 0 = can act, bit 4 = knocked out), +0x24 HP,
 -- +0x26 max HP. At the battle's first hit (0x80070FC0, inside the damage routine 0x80070F90) the whole party is set
