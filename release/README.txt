@@ -28,6 +28,8 @@ WHAT'S NEW IN v1.5
   Anima, Lovely Flower Field, Singing Wind Plains.
 - Voices are more consistent: Mint's laugh is her own, Lettuce stays
   polite, and Pudding says "na no da" at most once per box.
+- The ellipsis (…) now looks like English: three dots on the baseline,
+  like full stops, instead of the Japanese mid-height dots.
 
 WHAT'S NEW IN v1.4
 ------------------
@@ -151,8 +153,8 @@ FILE "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan (Ja
   8. Load the .cue file in your emulator (DuckStation, for example).
 
 To check the patch worked, the patched Track 1 should be:
-     CRC32 E8C16D16   MD5 b8fb4c3250f6b7eaac28d1a543d1be66
-     SHA-1 b2b0ef41da5af699b9b9509d1889a86ce4e8b897
+     CRC32 46D6F01A   MD5 296e8c4d77a26019e26e5c714a0cb863
+     SHA-1 f2f7f8729b2d0e4f810b2d0a399bc02a1abeaad2
 (Rom Patcher JS shows the CRC32 if you load the patched file as the ROM.)
 
 Tested in DuckStation and PCSX-Redux. Saves from the Japanese version keep
@@ -167,4 +169,4 @@ With xdelta3 on the command line:
 
 PATCH FILE
 ----------
-TokyoMewMew_en_v1.5.xdelta   840,887 bytes   CRC32 BE9DE387
+TokyoMewMew_en_v1.5.xdelta   841,062 bytes   CRC32 DA9DD138
