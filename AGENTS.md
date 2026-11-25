@@ -8,7 +8,7 @@ Skill: translate-retro-game; `python tools/skill.py` prints its folder. Read its
 - Disc: `python -X utf8 tools/build_disc.py [--only FILE..]` -> `build/TokyoMewMew_en.cue/.bin` (needs `rom/*.cue` + `.bin`)
 - Check: `python -X utf8 tools/check.py` (hashes, text build, codec round-trip, width lint; the pre-commit hook runs this)
 - Smoke: `python -X utf8 "$(python tools/skill.py)/scripts/emu.py" build/TokyoMewMew_en.cue --out work/qa/smoke --smoke --mash-key circle`
-- Warp (debug tool, cold boot, no save): `xvfb-run -a python -X utf8 tools/debug/warp.py SCENE` (`--list`, `--all`); scenes in `tools/debug/scenes.tsv`. Use it to reach any scene instead of asking the user for saves. To check how any dialogue line looks in its real box: `python -X utf8 tools/debug/warp.py --lines ROW,ROW,..` (sheet rows or ENTRY:LINE; `sheet_boxes.png` in the output folder). On Windows no xvfb-run is needed (PCSX-Redux in `tools/pcsx`).
+- Warp (debug tool, cold boot, no save): `xvfb-run -a python -X utf8 tools/debug/warp.py SCENE` (`--list`, `--all`); scenes in `tools/debug/scenes.tsv`. Use it to reach any scene instead of asking the user for saves. To check how any dialogue line looks in its real box: `python -X utf8 tools/debug/warp.py --lines ROW,ROW,..` (sheet rows or ENTRY:LINE, about 8 per run; `boxes_NN.png` in the output folder). On Windows no xvfb-run is needed (PCSX-Redux in `tools/pcsx`).
 - User-side injector: `patch/patch.bat` + `patch/inject.py` (drops built files into their own Track 1 .bin)
 
 ## Paths

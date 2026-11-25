@@ -67,6 +67,21 @@ if TEXTFILE then
     placed = true
     L.log(string.format("f%d textfile: %d bytes placed at entry 0 offset 0x473", n, #blk))
   end)
+  -- TEXTOP=handler of script op 0x78 (table 0x800FA7B4, read from the EXE by warp.py): log the frame each box starts,
+  -- so warp.py can take the last screenshot of every box exactly (even two identical boxes in a row)
+  -- The handler runs every frame while a box waits, so only a new script pc (context 0x800FF4B8 + 0x40) is a new box.
+  if TEXTOP then
+    local lastpc = nil
+    L.on_exec(TEXTOP, function()
+      if not placed then return end
+      local a = 0xFF4F8
+      local pc = mem[a] + mem[a + 1] * 256 + mem[a + 2] * 65536 + mem[a + 3] * 16777216
+      if pc ~= lastpc then
+        lastpc = pc
+        L.log(string.format("f%d textop pc %08x", frame, pc))
+      end
+    end)
+  end
 end
 -- KILLPARTY=1: Game Over on demand. Battle units: 0x44-byte records at 0x801190F4 + i*0x44 (i 0-2 party, then
 -- enemies; base pointer at 0x800FEACC). Record +0x0A flags (bit 0 = can act, bit 4 = knocked out), +0x24 HP,

@@ -8,7 +8,7 @@
 --lines takes sheet rows (TokyoMewMew_script_proofread.xlsx numbering, from work/script/script.json: run
 work/script/dump.py after a build) or ENTRY:LINE pairs. It boots a New Game and, when the opening's first box comes
 up, shows each line instead (warp.lua TEXTFILE): box size, line breaks, name plate and font as the player sees them,
-one box per circle press. Writes lines.txt and sheet_boxes.png (last frame of each box) in the output folder. The
+one box per circle press. Writes lines.txt and boxes_NN.png (each box, fully typed, labelled) in the output folder. The
 background is always the opening's airport; the face is the one the line's own scene uses.
 
 Boots, starts a New Game, and on the first map load writes the scene's map id, story flags and pokes (tools/debug/warp.lua;
@@ -96,8 +96,14 @@ def lines_block(spec):
     return blk + b'\x01\xff\xff', shown      # self-jump: the script waits here after the last box
 
 
+MAXBLOCK = 560   # bytes: 516 tested clean; a 4,000-byte block overwrote opening code other script threads still run
+                 # (the opening's own lines came back mid-run, one box garbled). Split longer lists into several runs.
+
+
 def run_lines(spec, disc, out):
     blk, shown = lines_block(spec)
+    if len(blk) > MAXBLOCK:
+        sys.exit('%d bytes of lines (max %d, about 8 lines): split the list into several --lines runs' % (len(blk), MAXBLOCK))
     os.makedirs(out, exist_ok=True)
     path = os.path.abspath(os.path.join(out, 'texts.bin')); open(path, 'wb').write(blk)
     open(os.path.join(out, 'lines.txt'), 'w', encoding='utf-8').write('\n'.join(shown) + '\n')
@@ -106,7 +112,7 @@ def run_lines(spec, disc, out):
     cmd = [sys.executable, '-X', 'utf8', os.path.join(SCRIPTS, 'emu.py'), disc, '--out', out,
            '--route-str', NEWGAME, '--mash', '150', '--mash-key', 'circle', '--frames', str(frames),
            '--shot-every', '25', '--debugger', '--timeout', '3000', '--var', 'MAP=nil',
-           '--var', "TEXTFILE='%s'" % path.replace('\\', '/'),
+           '--var', "TEXTFILE='%s'" % path.replace('\\', '/'), '--var', 'TEXTOP=0x%x' % text_handler(disc),
            '--script', os.path.join(ROOT, 'tools/debug/warp.lua'), '--sav', os.path.join(ROOT, 'tools/debug/blank.mcd')]
     print('lines ->', out, flush=True)
     rc = subprocess.call(cmd, cwd=ROOT)
@@ -114,32 +120,46 @@ def run_lines(spec, disc, out):
     return rc
 
 
-def boxes_sheet(out):
-    """sheet_boxes.png: the last frame of every dialogue box shown after the block was placed (text fully typed)."""
+def text_handler(disc):
+    """RAM address of the handler for script op 0x78 (table 0x800FA7B4), read from the EXE next to the disc."""
+    import struct
+    exe = os.path.join(os.path.dirname(os.path.abspath(disc)), 'SLPM_871.78')
+    if not os.path.exists(exe): exe = os.path.join(ROOT, 'orig/SLPM_871.78')
+    d = open(exe, 'rb').read(); base = struct.unpack_from('<I', d, 0x18)[0]
+    return struct.unpack_from('<I', d, 0x800FA7B4 - base + 0x800 + 0x78 * 4)[0]
+
+
+def box_frames(out):
+    """[(row label, screenshot)] for each line: the last shot before the next box starts (warp.lua logs 'textop' when
+    a box starts), or the final shot for the last line. Fewer boxes than lines = the run stopped early."""
     import glob, re
+    rows = [l.split(' = ')[0] for l in open(os.path.join(out, 'lines.txt'), encoding='utf-8') if ' = ' in l]
+    starts = [int(m.group(1)) for m in re.finditer(r'f(\d+) textop', open(os.path.join(out, 'log.txt'), encoding='utf-8', errors='replace').read())]
+    shots = sorted((int(re.search(r'f(\d+)\.png$', f).group(1)), f) for f in glob.glob(os.path.join(out, 'f[0-9]*.png')))
+    res = []
+    for k, row in enumerate(rows[:len(starts)]):
+        end = starts[k + 1] - 2 if k + 1 < len(starts) else 10 ** 9
+        cand = [f for n, f in shots if starts[k] < n <= end]
+        res.append((row, cand[-1] if cand else None))
+    return res
+
+
+def boxes_sheet(out):
+    """boxes_NN.png: each line's box at full size (text fully typed), labelled with its row, 20 per page."""
     try:
-        from PIL import Image
-        import numpy as np
+        from PIL import Image, ImageDraw
     except ImportError:
         return
-    placed = 0
-    for ln in open(os.path.join(out, 'log.txt'), encoding='utf-8', errors='replace'):
-        m = re.search(r'f(\d+) textfile', ln)
-        if m: placed = int(m.group(1))
-    fs = [f for f in sorted(glob.glob(os.path.join(out, 'f[0-9]*.png')))
-          if int(re.search(r'f(\d+)\.png$', f).group(1)) > placed + 300]
-    groups, last = [], None
-    for f in fs:                                   # a new box = the bottom third (the text box) changes a lot
-        im = Image.open(f).convert('L'); b = np.asarray(im.resize((80, 60)), dtype=np.int16)[40:]
-        if last is None or np.abs(b - last).mean() > 3: groups.append([])
-        groups[-1].append(f); last = b
-    keep = [g[-1] for g in groups if len(g) >= 2]
-    if not keep: return
-    w, h = Image.open(keep[0]).size; cols = 4; tw, th = w // 2, h // 2
-    sheet = Image.new('RGB', (cols * tw, ((len(keep) + cols - 1) // cols) * th))
-    for i, f in enumerate(keep):
-        sheet.paste(Image.open(f).convert('RGB').resize((tw, th)), ((i % cols) * tw, (i // cols) * th))
-    sheet.save(os.path.join(out, 'sheet_boxes.png'))
+    items = [(r, f) for r, f in box_frames(out) if f]
+    if not items: return
+    w, h = Image.open(items[0][1]).size; top = int(h * 0.66); ch = h - top; per, cols = 20, 2
+    for p in range(0, len(items), per):
+        part = items[p:p + per]; R = (len(part) + cols - 1) // cols
+        sh = Image.new('RGB', (cols * w, R * (ch + 16)), (255, 255, 255)); dr = ImageDraw.Draw(sh)
+        for i, (row, f) in enumerate(part):
+            x, y = (i % cols) * w, (i // cols) * (ch + 16)
+            sh.paste(Image.open(f).convert('RGB').crop((0, top, w, h)), (x, y + 16)); dr.text((x + 4, y + 2), 'row ' + row, fill=(0, 0, 0))
+        sh.save(os.path.join(out, 'boxes_%02d.png' % (p // per)))
 
 
 def main():
