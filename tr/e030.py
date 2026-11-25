@@ -1,7 +1,7 @@
 # script 30 – night forest with partner, first battle with Spirit
 TR = {
 0: "To “Cottage Woods”",
-1: "Uuu～ Creepy woods～",
+1: 'Uuu～ Spooky night woods～',
 3: "『…Ah！』",
 4: "『Parapara… so there must be\nChimera Animas around too～\nO-okay, be careful.』",
 5: "Huh？ The Parapara's gone…\nLucky♥",

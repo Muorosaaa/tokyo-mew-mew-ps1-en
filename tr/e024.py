@@ -8,7 +8,7 @@ TR = {
 7: "A p-penguin…？",
 8: "Ah…",
 9: "Puddiiing～ Where'd you go～\nI keep going deeper, and\nsomeone's watching me～",
-10: "But at least I'm not alone…\nRight, Ma… Huh？",
+10: "But at least I'm not alone…\nRight？ You're still… Huh？",
 11: "No waaay！\nHow'd we get separated～\nAah, even Masha's gone～",
 13: "Kya⁈",
 14: "Oh, it's you again…",

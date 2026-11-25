@@ -4,7 +4,7 @@ NOTHING="Nothing unusual here."
 TR = {
 0: "This is Shirogane and\nAkasaka-san's room, right？\nBetter not snoop around.",
 1: "Okay, that's enough looking\naround. Maybe I'll go chat\nwith everyone.",
-2: "Oh？ Is something wrong？",
+2: 'Oh？ May I help you？',
 3: "  「Um, nothing really…」\n  「I'd like to trade items.」",
 4: "I see. Then please take care.",
 5: "Ah, okay！",

@@ -10,10 +10,10 @@ TR.update({
 41: "I could go outside from here…\nbut I'd better stay inside\nuntil the others get back.",
 42: "Oh, Ichigo onee-chan！\nPerfect timing！ Let's go\nexplore together, na no da！",
 43: "Exploring？ We're supposed to\nbe house-sitting. If we slack\noff, we might lose dinner！",
-44: "Uuu～ Okay, na no da. Too bad.\nThanks for warning me！ You\nsaved my dinner, na no da！",
+44: 'Uuu～ Okay. Too bad.\nIchigo onee-chan, you saved\nmy life！ Thanks, na no da！',
 45: "You're exaggerating～\nBut don't wander off, OK？",
 46: "Roooger that, na no da！",  # deliberately 2 bytes over: tests relocation
-47: "It's okay, na no da.\nI'll be patient, na no da.\nThanks for caring, na no da.",
+47: "It's okay！\nI'll hold out, na no da.\nThanks for worrying！",
 48: "Heh heh heh…",
 49: 'Now then… what shall I do\nwith you？ Kukukuku…',
 })
@@ -32,14 +32,14 @@ TR.update({
 60: "Yes. It's too early to say,\nbut the penguin Ichigo-san met\nmay be the RDA we're after.",
 61: "（What they're after…？）",
 62: '（No, no, Ichigo！\nEavesdropping is bad…）',
-63: "Yeah. It's still a chick, but\nit's a Humboldt penguin, sure.\nNow to get the girls on it.",
+63: "Yeah. It's still a chick, but\ndefinitely a Humboldt penguin.\nNow, how to get them on it？",
 64: 'Why not just ask them\nnicely？',
 65: "How's that any fun？",
 66: "Sigh…",
 67: "I can't let that slide,\nI'm afraid.",
 68: "Whoa！ M-Mint… when did\nyou get here⁈",
 69: "Everyone's here！",
-70: "Eavesdropping, huh？ Shameful.",
+70: 'Eavesdropping, huh？ Not cool.',
 71: "That's beside the point！\nYou kept secrets from us and\ntried to use us！",
 72: "Not a pleasant feeling.",
 73: "Um, if you don't mind,\ncould you tell us？",
@@ -61,7 +61,7 @@ TR.update({
 89: "Now, now.",
 90: "…So we just find\nthat RDA？",
 91: "Yes, exactly. The penguin\nIchigo-san met is an RDA\nHumboldt penguin.",
-92: "It's a heat-hardy species, but\nfor it to get this far inland,\nthe Mew Aqua must be strong.",
+92: "It's a heat-hardy species, but\nto come this far inland, it\nmust carry Mew Aqua's power.",
 93: "First, please find that\nHumboldt penguin… er,\n“Yuki-chan.”",
 94: "About the girl who's its\nfriend: aside from staff, the\nonly people here are family",
 95: "of staff, and you lot.\nShe's likely a ranger's kid.\nWe'll look into that too,",
@@ -70,7 +70,7 @@ TR.update({
 98: "Well, yeah, but…",
 99: "Wait, Ichigo⁈",
 100: "Too late to complain now.",
-101: 'You too, onee-sama…？',
+101: 'Even you, onee-sama…',
 102: "Pudding wants to see\nYuki-chan too！",
 103: "That's true.",
 104: "『Mint-san, could you watch\nIchigo-san so she doesn't\nget lost again？』",
@@ -83,7 +83,7 @@ TR.update({
 111: "I'll give them to you in\nexchange for animal DNA data\nyou collect.",
 112: "Trade？ Why not just\ngive them to us？",
 113: "I tried to, but…",
-114: "The island's been through a\nlot, right？ And life's not\nthat sweet. Give ＆ Take！",
+114: "The island's been through a\nlot, right？ And life's not\nthat easy. Give ＆ Take！",
 115: "That's the rule for living！\nAnyway, if you want a trade,\ntalk to Keiichiro.",
 116: "Very well, but how exactly\ndoes this system work？",
 117: "Ask Keiichiro that too.\nThat's all.",
@@ -130,13 +130,13 @@ TR.update({171: 'Ooh～'})
 # naturalness pass: lines that came from translation memory
 TR.update({179: 'I, for one, would choose\nyou over any legend.'})
 # naturalness pass: lines that came from translation memory
-TR.update({181: "Aren't you popular～"})
+TR.update({181: "My, aren't you popular～"})
 # naturalness pass: lines that came from translation memory
 TR.update({186: "Um… Ichigo onee-chan.\nYou can have Ringo's pendant."})
 # naturalness pass: lines that came from translation memory
 TR.update({187: "Isn't it special to you？"})
 # naturalness pass: lines that came from translation memory
-TR.update({192: 'Okay… Can we meet again？'})
+TR.update({192: "Okay… We'll meet again？"})
 # naturalness pass: lines that came from translation memory
 TR.update({193: "Of course. 'Cause we're\nfriends… no, best\nfriends, nya♪"})
 # naturalness pass: lines that came from translation memory
@@ -162,7 +162,7 @@ TR.update({226: 'Nothing big. I just\nscattered Parapara again.'})
 # naturalness pass: lines that came from translation memory
 TR.update({229: 'Stronger Chimeras…？\nWhat are you after？'})
 # naturalness pass: lines that came from translation memory
-TR.update({230: 'Nothing, really. I just\nwanted to give you a hard\ntime. Nice present, huh？'})
+TR.update({230: 'Nothing, really. I just felt\nlike giving Ichigo a hard\ntime. Nice present, huh？'})
 # naturalness pass: lines that came from translation memory
 TR.update({245: 'So we just collect them？'})
 # naturalness pass: lines that came from translation memory
@@ -180,4 +180,4 @@ TR.update({267: 'Heh… I suppose so.\nGoes without saying.'})
 # naturalness pass: lines that came from translation memory
 TR.update({210: "Goodbye isn't forever."})
 # naturalness pass: lines that came from translation memory
-TR.update({225: 'I knew it！\nYou did something⁈'})
+TR.update({225: 'I knew it！\nYou did something！'})

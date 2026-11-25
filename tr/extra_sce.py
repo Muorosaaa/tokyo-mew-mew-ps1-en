@@ -4,5 +4,5 @@
 # Found by tools/jpleft.py (whole-disc scan for untouched Japanese).
 X = {
 242: [(0xb67, '2人でそうじをしました。／部屋の中はピカピカです。',
-       "Cleaned up together.\nThe room is sparkling！")],   # Lettuce's room, after Ichigo offers to help clean
+       "You cleaned up together.\nThe room is sparkling！")],   # Lettuce's room, after Ichigo offers to help clean
 }

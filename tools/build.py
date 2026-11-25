@@ -33,6 +33,7 @@ def build_sce():
     for n in range(256):
         if B[n][1]-B[n][0]<8: continue
         TR=dict(importlib.import_module('e%03d'%n).TR) if n in ENTRIES else {}
+        TR.update(importlib.import_module('scene_fix').S.get(n,{}))   # per-scene overrides (tr/scene_fix.py)
         for k,t in TR.items(): assert not check(t),(n,k,check(t))
         s,t=B[n]; e=bytes(d[s:t]); M=find_messages(e)
         # messages find_messages misses (tr/extra_sce.py), appended so existing indexes don't shift
