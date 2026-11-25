@@ -92,7 +92,17 @@ def build_exe():
     nd,n,free=seqblock.apply(nd,0x1f412,0x228a0,[(0x1f112,64),(0x1f212,127)],ETR); print('animal book: %d strings, %d bytes free'%(n,free))
     import boxes
     nd,n=boxes.apply(d,nd); print('battle popup boxes widened: %d (+ skill-learned box widths)'%n)
+    nd=english_ellipsis(nd)
     return nd
+def english_ellipsis(nd):
+    """Full-width … (glyph 0xB2, 16x16 1bpp tiles at EXE 0xDE5B0, 2 bytes per row) drew three 2x2 dots at mid-height,
+    Japanese style. Move them to the baseline (rows 14-15, where the English full stop sits) so … reads as three full
+    stops. Checked on screen 2026-11-25: glyph row r = screen row 174+r in a box's first line, baseline = row 15."""
+    o=0xde5b0+0xb2*32; g=bytearray(nd[o:o+32])
+    assert g==bytes(18)+bytes.fromhex('99909990')+bytes(10), g.hex()   # original: dots in rows 9-10
+    g=bytes(28)+bytes.fromhex('99909990')
+    nd=bytearray(nd); nd[o:o+32]=g; print('ellipsis glyph moved to the baseline')
+    return bytes(nd)
 if __name__=='__main__':
     sce,rep=build_sce(); exe=build_exe()
     open(_ROOT+'/build/D_SCE.BIN','wb').write(sce)
