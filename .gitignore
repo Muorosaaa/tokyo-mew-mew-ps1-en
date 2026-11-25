@@ -20,3 +20,6 @@ tools/*/
 *.mcd
 !tools/debug/blank.mcd
 !tools/debug/user_card.mcd
+
+# per-machine Claude settings (skill path override)
+.claude/settings.local.json
