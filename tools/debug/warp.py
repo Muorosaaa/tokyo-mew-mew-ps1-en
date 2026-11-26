@@ -50,11 +50,14 @@ def route_of(start):
     return ';'.join(lines), os.path.join(ROOT, card)
 
 
+SHOT_EVERY = 250
+
+
 def run(name, sc, disc, out):
     route, card = route_of(sc['start'])
     cmd = [sys.executable, '-X', 'utf8', os.path.join(SCRIPTS, 'emu.py'), disc, '--out', out,
            '--route-str', route, '--mash', '40', '--mash-key', 'circle', '--frames', str(sc['frames']),
-           '--shot-every', '250', '--sheet', '--debugger', '--timeout', '3000',
+           '--shot-every', str(SHOT_EVERY), '--sheet', '--debugger', '--timeout', '3000',
            '--var', 'MAP=%s' % (sc['map'] if sc['map'] is not None else 'nil'),
            '--var', "FLAGS='%s'" % sc['flags'], '--var', "POKE='%s'" % sc['poke'],
            '--var', "SPATCH='%s'" % sc['spatch'],
@@ -170,7 +173,10 @@ def main():
     ap.add_argument('--out')
     ap.add_argument('--all', action='store_true')
     ap.add_argument('--list', action='store_true')
+    ap.add_argument('--shot-every', type=int, default=250, help='screenshot interval in frames (default 250)')
     a = ap.parse_args()
+    global SHOT_EVERY
+    SHOT_EVERY = a.shot_every
     if a.lines:
         return run_lines(a.lines, a.disc, a.out or os.path.join(ROOT, 'work/qa/warp', 'lines_' + a.lines.split(',')[0].replace(':', '_')))
     sc = scenes()
