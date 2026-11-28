@@ -2,7 +2,7 @@
 
 Skill: translate-retro-game, the extended copy (adds PS2, Switch, 3DS, Saturn, Dreamcast) from github.com/Muorosaaa/translate-retro-game-extended, loaded as the Claude Code plugin `translate-retro-game@retro-translation-extended` (enabled in .claude/settings.json; other agents: clone that repo, `<clone>/skills/translate-retro-game/SKILL.md`). `$SKILL` = `"$(python tools/skill.py)"` (bash and PowerShell); never paste a `plugins/cache/<hash>` path. Extended-platform notes: `$SKILL/../../EXTENDED.md`. Read its SKILL.md before ROM, text or QA work.
 
-Skill changes go to github.com/Muorosaaa/translate-retro-game-extended only: edit the clone at `D:/Claude_Projects/PS2Test/translate-retro-game`, run the touched script's `--selftest`, commit and push to `origin master`, then `/plugin marketplace update retro-translation-extended`. Never edit the plugin copy under `~/.claude/plugins/` or keep a skill copy in this repo. Log the surprise in `docs/skill-gotchas.md`.
+Skill changes go to github.com/Muorosaaa/translate-retro-game-extended only: edit the clone at `D:/Claude_Projects/Utilities/translate-retro-game-skill`, run the touched script's `--selftest`, commit and push to `origin master`, then `/plugin marketplace update retro-translation-extended`. Never edit the plugin copy under `~/.claude/plugins/` or keep a skill copy in this repo. Log the surprise in `docs/skill-gotchas.md`.
 
 ## Commands (run from repo root)
 - Text build: `python -X utf8 tools/build.py` -> `build/D_SCE.BIN`, `build/SLPM_871.78` (seconds)

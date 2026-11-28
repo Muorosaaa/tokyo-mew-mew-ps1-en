@@ -20,7 +20,7 @@ affectionate, aimed at young fans of the anime.
   `>> ROW =FIRST` marks a repeated Japanese line that shares FIRST's English; comment on FIRST only, unless the
   shared English is wrong for this particular scene (then say so on ROW).
   Chapters are groups of script entries; they hold several scenes, which may not be in strict play order.
-- `glossary.md`, `docs/decisions.md` (repo root D:\Claude_Projects\TokyoMewMewPS1). Their rulings are binding.
+- `glossary.md`, `docs/decisions.md` (repo root D:\Claude_Projects\English_Translations\TokyoMewMewPS1). Their rulings are binding.
 
 ## Judge
 - **Accuracy:** the English says what the Japanese says (who does what, negations, who is spoken to, what is asked).
